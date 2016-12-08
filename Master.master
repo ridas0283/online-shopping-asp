@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head runat="server">
+
+    <link rel="stylesheet" href="CSS/format.css" />
+    <link rel="stylesheet" href="CSS/animations.css" />
+    <link rel="stylesheet" href="CSS/animate.css" />
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <table class="toptable">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <asp:Button ID="bLogIn" runat="server" Text="Log In" CssClass="labelButton" OnClick="bLogIn_Click" />
+                &nbsp;
+                <asp:Button ID="bSignUp" runat="server" Text="Sign Up" CssClass="labelButton" OnClick="bSignUp_Click" />
+                    <asp:Button ID="bLogOut" runat="server" Text="Log Out" CssClass="labelButton" Visible="False" OnClick="bLogOut_Click" />
+                <asp:Button ID="bSettings" runat="server" Text="Settings" CssClass="labelButton" Visible="False"  />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:ImageButton ID="ibLogo" runat="server" ImageUrl="~/Page_Images/logo.jpg" Width="100%" Height="50%" OnClick="ibLogo_Click"/>
+                </td>
+                <td colspan="4">
+                    <asp:TextBox ID="tbSearch" runat="server" MaxLength="40" 
+                        placeholder="Search by typing the product or brand name"></asp:TextBox>
+                    &nbsp;<asp:Button ID="bSearch" runat="server" CssClass="button" Text="Search" OnClick="bSearch_Click" />
+                    </td> 
+                <td>
+                    <asp:ImageButton ID="ibCart" runat="server" ImageUrl="~/Page_Images/cart.jpg" CssClass="imagebutton" 
+                        onmouseover="src='Page_Images/cart_hover.jpg'" onmouseout="src='Page_Images/cart.jpg'" Visible="False" OnClick="ibCart_Click"/>
+                    
+                </td>
+                <td>
+                    <asp:Button ID="bOrders" runat="server" CssClass="button" OnClick="bOrders_Click" Text="My Orders" Visible="False" />
+                </td>
+            </tr>
+            </table>
+    </div>
+
+    <div>
+        
+        <table class="menutable">
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> <asp:Button ID="bMobiles" runat="server" CssClass="menubutton" Text="Mobiles" OnClick="bMobiles_Click" /> </td>
+                <td> <asp:Button ID="bLaptops" runat="server" CssClass="menubutton" Text="Laptops" OnClick="bLaptops_Click" /> </td>
+                <td> <asp:Button ID="bCameras" runat="server" CssClass="menubutton" Text="Cameras" OnClick="bCameras_Click" /> </td>
+                <td> <asp:Button ID="bTelevisions" runat="server" CssClass="menubutton" Text="Televisions" OnClick="bTelevisions_Click" /> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            
+            </table>
+        
+    </div>
+
+        <asp:ContentPlaceHolder id="HomeContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

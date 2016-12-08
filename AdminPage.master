@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminPage.master.cs" Inherits="AdminPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="CSS/format.css" />
+    <link rel="stylesheet" href="CSS/animations.css" />
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="toptable">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <asp:Button ID="bSettings" runat="server" CssClass="labelButton" Text="Settings"></asp:Button>
+                &nbsp;
+                &nbsp;<asp:Button ID="bOut" runat="server" CssClass="labelButton" Text="Log Out" OnClick="bOut_Click"></asp:Button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:ImageButton ID="ibLogo" runat="server" ImageUrl="~/Page_Images/logo.jpg" Width="100%" Height="50%"/>
+                </td>
+                <td colspan="4">
+                    &nbsp;</td> 
+                <td>
+                    &nbsp;</td>
+                <td></td>
+            </tr>
+            </table>
+    </div>
+
+    <div>
+        
+        <table class="menutable">
+            <tr>
+                <td> &nbsp;</td>
+                <td> &nbsp;</td>
+                <td> <asp:Button ID="bAddItem" runat="server" CssClass="menubutton" Text="Add Item" OnClick="bAddItem_Click" /> </td>
+                <td> <asp:Button ID="bEditItem" runat="server" CssClass="menubutton" Text="Edit Item" OnClick="bEditItem_Click" /> </td>
+                <td> <asp:Button ID="bManage" runat="server" CssClass="menubutton" Text="Manage" OnClick="bManage_Click" /> </td>
+                <td> </td>
+                <td> &nbsp;</td>
+            </tr>
+            
+            </table>
+        
+    </div>
+        <asp:ContentPlaceHolder id="AdminTools" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
